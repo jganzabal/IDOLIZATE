@@ -23,8 +23,6 @@ function uploadFileAsPromise(file) {
         task.on('state_changed',
             function progress(snapshot) {
                 var percentage = snapshot.bytesTransferred / snapshot.totalBytes * 100;
-                //console.log(file.name + ":" + percentage)
-
             },
             function error(err) {
                 console.error('Upload failed:', error);
@@ -75,8 +73,12 @@ function handleFileSelect(evt) {
         console.log(uploadedFiles)
         for (key in uploadedFiles) {
             var videosDataBaseRef = firebase.database().ref('videos_cumple/' + key + '/');
+            /*videosDataBaseRef.once('value').then(function(snapshot) {
+
+
+            });*/
+            console.log(key)
             videosDataBaseRef.update(uploadedFiles[key])
         }
-
     });
 }
