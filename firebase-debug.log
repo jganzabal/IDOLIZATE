@@ -1,0 +1,28 @@
+[debug] [2017-09-05T05:10:48.225Z] ----------------------------------------------------------------------
+[debug] [2017-09-05T05:10:48.227Z] Command:       /Users/julianganzabal/.nvm/versions/node/v4.8.3/bin/node /Users/julianganzabal/.nvm/versions/node/v4.8.3/bin/firebase serve
+[debug] [2017-09-05T05:10:48.228Z] CLI Version:   3.9.2
+[debug] [2017-09-05T05:10:48.228Z] Platform:      darwin
+[debug] [2017-09-05T05:10:48.228Z] Node Version:  v4.8.3
+[debug] [2017-09-05T05:10:48.230Z] Time:          Tue Sep 05 2017 02:10:48 GMT-0300 (-03)
+[debug] [2017-09-05T05:10:48.230Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-05T05:10:48.243Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-05T05:10:48.244Z] > authorizing via signed-in user
+[debug] [2017-09-05T05:10:48.246Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/celebstore-dev  
+ Tue Sep 05 2017 02:10:48 GMT-0300 (-03)
+[debug] [2017-09-05T05:11:09.765Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-05T05:11:09.767Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/celebstore-dev/tokens  
+ Tue Sep 05 2017 02:11:09 GMT-0300 (-03)
+[debug] [2017-09-05T05:11:10.717Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/julianganzabal/idolizate/videosUploads/storage'...
+[info] 
+[debug] [2017-09-05T05:11:10.723Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/celebstore-dev  
+ Tue Sep 05 2017 02:11:10 GMT-0300 (-03)
+[debug] [2017-09-05T05:11:12.218Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-05T05:11:12.219Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/898849830357/clients/_:getWebAppConfig  
+ Tue Sep 05 2017 02:11:12 GMT-0300 (-03)
+[debug] [2017-09-05T05:11:13.945Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] ✔  hosting: Local server: http://localhost:5000
+
