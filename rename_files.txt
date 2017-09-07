@@ -1,0 +1,2 @@
+rename -v 's/(\w+)/$1-lionel_messi/' *
+rename -f 'y/A-Z/a-z/' *

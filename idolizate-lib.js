@@ -23,6 +23,7 @@ function uploadFileAsPromise(file) {
         task.on('state_changed',
             function progress(snapshot) {
                 var percentage = snapshot.bytesTransferred / snapshot.totalBytes * 100;
+                console.log(file.name + ": " + percentage)
             },
             function error(err) {
                 console.error('Upload failed:', error);
@@ -37,10 +38,10 @@ function uploadFileAsPromise(file) {
                     uploadedFiles[celeb] = {}
                 }
                 if (uploadedFiles[celeb]['names']) {
-                    uploadedFiles[celeb]['names'].push(toTitleCase(name))
+                    uploadedFiles[celeb]['names'].push(toTitleCase(name.replace("_", " ")))
                 } else {
                     uploadedFiles[celeb]['names'] = []
-                    uploadedFiles[celeb]['names'].push(toTitleCase(name))
+                    uploadedFiles[celeb]['names'].push(toTitleCase(name.replace("_", " ")))
                 }
 
                 uploadedFiles[celeb][name] = url
@@ -68,16 +69,17 @@ function handleFileSelect(evt) {
     console.log("All requests done")
 
     Promise.all(uploadPromises).then(values => {
-        console.log("Finished")
-        console.log("final JOSN:" + JSON.stringify(uploadedFiles))
-        console.log(uploadedFiles)
+
         for (key in uploadedFiles) {
             var videosDataBaseRef = firebase.database().ref('videos_cumple/' + key + '/');
             /*videosDataBaseRef.once('value').then(function(snapshot) {
 
 
             });*/
-            console.log(key)
+            console.log("Finished: " + key)
+            window._ = _
+            uploadedFiles[key]['names'] = _.sortBy(uploadedFiles[key]['names']).join(', ')
+            console.log(uploadedFiles[key]['names'])
             videosDataBaseRef.update(uploadedFiles[key])
         }
     });
