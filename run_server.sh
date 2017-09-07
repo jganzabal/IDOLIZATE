@@ -1,5 +1,7 @@
 # npm install -g firebase-tools
-# firebase login
+git pull
+
+firebase login
 
 firebase use --add celebstore-99eab
 
